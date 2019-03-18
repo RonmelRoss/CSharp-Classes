@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionApp.cs" />
+    <Compile Include="InterfaceApp.cs" />
+    <Compile Include="NamespaceApp.cs" />
+    <Compile Include="OperatorOverloadApp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
