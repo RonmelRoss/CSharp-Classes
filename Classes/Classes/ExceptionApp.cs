@@ -53,4 +53,27 @@ namespace ExceptionApp
             }
         }
     }
+    public class StringException : Exception
+    {
+        public StringException(string message) : base(message)
+        {
+        }
+    }
+    public class StringFunc
+    {
+        //int intString = 0;
+
+        public void showString(int x)
+        {
+            
+            if (x < 0)
+            {
+                throw (new StringException("Bad String"));
+            }
+            else
+            {
+                Console.WriteLine("{0}", x);
+            }
+        }
+    }
 }

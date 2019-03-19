@@ -16,8 +16,7 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            /**************/
-            //Handles Shape, Rectangle, RectangleConstruct class
+            #region Uses Shape, Rectangle, RectangleConstruct class
             Console.WriteLine("DEMONSTRATION ON INHERITANCE");
             int w1 = 5;
             int h1 = 7;
@@ -35,18 +34,16 @@ namespace Classes
             Rect.SetHeight(h1);
 
             Console.WriteLine("Total area: {0}", Rect.getArea());
-            /**************/
+            #endregion
 
-            /**************/
-            //Handles Line class
+            #region Uses Line class
             Console.WriteLine("\nDEMONSTRATION ON USING CONSTRUCTORS/DESTRUCTORS");
             Line line = new Line();    // set line length         
             line.setLength(6.0);
             Console.WriteLine("Length of line : {0}", line.getLength());
-            /**************/
+            #endregion
 
-            /**************/
-            //Handles StaticVar class
+            #region Uses StaticVar class
             Console.WriteLine("\nDEMONSTRATION ON USING STATIC MEMBERS");
             StaticVar s1 = new StaticVar();
             StaticVar s2 = new StaticVar();
@@ -60,9 +57,9 @@ namespace Classes
 
             Console.WriteLine("Variable num for s1: {0}", s1.getNum());
             Console.WriteLine("Variable num for s2: {0}", s2.getNum());
-            /**************/
+            #endregion
 
-            /**************/
+            #region Uses Polymorph Class
             Console.WriteLine("\nDEMONSTRATION ON POLYMORPHISM");
             //Polymorph p = new Polymorph();
             Polymorph p = new Polymorph();
@@ -73,7 +70,7 @@ namespace Classes
             p.Print(500.263);
             // Call print to print string          
             p.Print("Hello C#");
-            /**************/
+            #endregion
 
             /**************/
             Console.WriteLine("\nDEMONSTRATION ON ABSTRACT CLASSES");
@@ -109,10 +106,10 @@ namespace Classes
             d.computeDifference();
 
             Console.WriteLine("Maximum Difference: "+d.maximumDifference);
-
             /**************/
 
-            /**************/
+            
+            #region Referenced OperatorOverloadApp namespace
             Console.WriteLine("\nDEMONSTRATION ON OPERATOR OVERLOADING");
             Box Box1 = new Box();   // Declare Box1 of type Box
             Box Box2 = new Box();   // Declare Box2 of type Box
@@ -181,7 +178,7 @@ namespace Classes
                 Console.WriteLine("Box3 is equal to Box4");
             else
                 Console.WriteLine("Box3 is not equal to Box4");
-            /**************/
+            #endregion
 
             /**************/
             Console.WriteLine("\nDEMONSTRATION ON INTERFACES");
@@ -221,6 +218,20 @@ namespace Classes
             {
                 Console.WriteLine("TempIsZeroException: {0}", e.Message);
             }
+
+            #region THIS SHOWS A PREPROCESSOR DIRECTIVE
+            Console.WriteLine("\nTHIRD EXCEPTION");
+            string strVal = Console.ReadLine();
+            try
+            {
+                int x = int.Parse(strVal);
+                Console.WriteLine(x);
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Bad String");
+            }
+            #endregion
             /**************/
 
             Console.ReadKey();
