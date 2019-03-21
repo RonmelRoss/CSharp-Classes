@@ -72,14 +72,14 @@ namespace Classes
             p.Print("Hello C#");
             #endregion
 
-            /**************/
+            #region Demonstration on Abstract Classes
             Console.WriteLine("\nDEMONSTRATION ON ABSTRACT CLASSES");
             Rectangle1 r = new Rectangle1(10, 7);
             double a = r.Area();
             Console.WriteLine("Area: {0}", a);
-            /**************/
-
-            /**************/
+            #endregion
+            
+            #region Demonstration on Dynamic Polymorphism (Using Virtual Functions)
             Console.WriteLine("\nDEMONSTRATION ON DYNAMIC FUNCTION (Using Virtual Functions)");
             Rectangle2 rect2 = new Rectangle2(10, 7);
             Triangle t = new Triangle(10, 5);
@@ -88,8 +88,9 @@ namespace Classes
             c.CallArea(rect2);
             c.CallArea(t);
             /**************/
+            #endregion
 
-            /**************/
+            #region Day14: Scope
             Console.WriteLine("\nACTIVITY ON RETRIEVING MAXIMUM DIFFERENCE BETWEEN VALUES");
             //DIFFERENCE CLASS
             //Computes maximum difference in a range of values
@@ -106,9 +107,8 @@ namespace Classes
             d.computeDifference();
 
             Console.WriteLine("Maximum Difference: "+d.maximumDifference);
-            /**************/
+            #endregion
 
-            
             #region Referenced OperatorOverloadApp namespace
             Console.WriteLine("\nDEMONSTRATION ON OPERATOR OVERLOADING");
             Box Box1 = new Box();   // Declare Box1 of type Box
@@ -180,16 +180,16 @@ namespace Classes
                 Console.WriteLine("Box3 is not equal to Box4");
             #endregion
 
-            /**************/
+            #region Demonstration on Interfaces
             Console.WriteLine("\nDEMONSTRATION ON INTERFACES");
             Transaction t1 = new Transaction("001", "8/10/2012", 78900.00);
             Transaction t2 = new Transaction("002", "9/10/2012", 451900.00);
 
             t1.showTransaction();
             t2.showTransaction();
-            /**************/
+            #endregion
 
-            /**************/
+            #region Demonstration on Namespaces
             Console.WriteLine("\nDEMONSTRATION ON NAMESPACES");
             abc fc = new abc();
             efg sc = new efg();
@@ -200,9 +200,9 @@ namespace Classes
             third_space.fourth_space.efgh sc1 = new third_space.fourth_space.efgh();
             fc1.func();
             sc1.func();
-            /**************/
+            #endregion
 
-            /**************/
+            #region Demonstration on Exceptions
             Console.WriteLine("\nDEMONSTRATION ON EXCEPTIONS");
             Console.WriteLine("FIRST EXCEPTION");
             DivNumbers eDiv = new DivNumbers();
@@ -218,6 +218,7 @@ namespace Classes
             {
                 Console.WriteLine("TempIsZeroException: {0}", e.Message);
             }
+            #endregion
 
             #region THIS SHOWS A PREPROCESSOR DIRECTIVE
             Console.WriteLine("\nTHIRD EXCEPTION");
@@ -232,12 +233,12 @@ namespace Classes
                 Console.WriteLine("Bad String");
             }
             #endregion
-            /**************/
 
             Console.ReadKey();
         }
     }
-    //Demonstration on inheritance
+
+    #region Demonstration on inheritance
     class Shape
     {
         //Base Class (or existing class)
@@ -249,13 +250,14 @@ namespace Classes
     class Rectangle : Shape
     {
         //Derived class
-        //Demonstration on using inheritance
         public int getArea()
         {
             return (width * height);
         }
     }
-    //Demonstration on using inheritance with constructors
+    #endregion
+
+    #region Demonstration on using inheritance with constructors
     class RectangleConstruct : Shape
     {
 
@@ -271,7 +273,9 @@ namespace Classes
         }
 
     }
-    //Demonstration on using constructors and deconstructors
+    #endregion
+
+    #region Demonstration on using constructors and deconstructors
     class Line
     {
         private double length;   // Length of a line              
@@ -293,10 +297,11 @@ namespace Classes
             return length;
         }
     }
-    //Demonstration on using static members
+    #endregion
+
+    #region Demonstration on using static members
     class StaticVar
     {
-
         public static int num;
         public void count()
         {
@@ -307,7 +312,9 @@ namespace Classes
             return num;
         }
     }
-    //Demonstration on polymorphism (having many forms)
+    #endregion
+
+    #region Demonstration on polymorphism (having many forms)
     //Static polymorphism - response to a function is decided at compile time
     class Polymorph
     {
@@ -326,7 +333,9 @@ namespace Classes
             Console.WriteLine("Printing string: {0}", s);
         }
     }
-    //Demonstration on Abstract Classes and Dynamic Polymorphism
+    #endregion
+
+    #region Demonstration on Abstract Classes and Dynamic Polymorphism
     //Dynamic polymorphism - response to a function is decided at run-time
     abstract class Shape1
     {
@@ -347,10 +356,12 @@ namespace Classes
             return (width * length);
         }
     }
-    //Dynamic polymorphism using virtual functions
+    #endregion
+
+    #region Dynamic polymorphism using virtual functions
+    //Check the virtual function & the override
     class Shape2
     {
-        //Check the virtual function & the override
         protected int width, height;
         public Shape2(int a = 0, int b = 0)
         {
@@ -395,6 +406,8 @@ namespace Classes
             Console.WriteLine("Area: {0}", a);
         }
     }
+    #endregion
+
     class Difference
     {
         private int[] elements;
